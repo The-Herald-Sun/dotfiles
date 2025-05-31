@@ -54,10 +54,18 @@ button:hover {
     background-color: #a37800;
 }
 
+#workspace {
+    background-color: #ffffff;
+    border-radius: 100px;
+
+}
+
 #workspaces button {
     padding: 0 5px;
-    background-color: transparent;
-    color: #ffffff;
+    margin: 4px;
+    background-color: #f0f0f0;
+    color: #000000;
+    border-radius: 10px;
 }
 
 #workspaces button:hover {
@@ -79,7 +87,6 @@ button:hover {
 }
 
 
-#workspaces, 
 #clock,
 #battery,
 #cpu,
