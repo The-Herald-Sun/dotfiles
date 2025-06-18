@@ -1,23 +1,62 @@
 {
     "layer": "top",
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["battery"],
-    
-    "hyprland/workspaces": {
-        
-    },
-
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "battery",
+        "pulseaudio"
+    ],
+    "hyprland/workspaces": {},
     "sway/window": {
         "max-length": 50
     },
-   
     "battery": {
         "format": "{capacity}% {icon}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
     },
-  
     "clock": {
         "format-alt": "{:%a, %d. %b  %H:%M}"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": " Muted",
+        "format-alt": "{icon} {volume}%",
+        "scroll-step": 1,
+        "on-click": "pavucontrol", // Opens pavucontrol for detailed control
+        "on-scroll-up": "pamixer -i 5", // Increase volume by 5%
+        "on-scroll-down": "pamixer -d 5", // Decrease volume by 5%
+        "on-click-right": "pamixer -t", // Toggle mute
+        "headphones-icons": [
+            " headphones-0",
+            " headphones-1",
+            " headphones-2",
+            " headphones-3",
+            " headphones-4"
+        ], // Optional icons for headphones
+        "speaker-icons": [
+            " speaker-0",
+            " speaker-1",
+            " speaker-2",
+            " speaker-3",
+            " speaker-4"
+        ], // Optional icons for speakers
+        "microphone-icons": [
+            " mic-0",
+            " mic-1",
+            " mic-2",
+            " mic-3",
+            " mic-4"
+        ], // Optional icons for microphone
+        "mixer": "pavucontrol" // Specify the mixer application
     }
 }
