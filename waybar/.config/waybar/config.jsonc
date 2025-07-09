@@ -1,6 +1,7 @@
 {
     "layer": "top",
     "modules-left": [
+        "custom/logout",
         "hyprland/workspaces"
     ],
     "modules-center": [
@@ -58,5 +59,9 @@
             " mic-4"
         ], // Optional icons for microphone
         "mixer": "pavucontrol" // Specify the mixer application
-    }
+    },
+    "custom/logout": {
+      "format": "", 
+      "on-click": "wlogout"
+  }
 }
