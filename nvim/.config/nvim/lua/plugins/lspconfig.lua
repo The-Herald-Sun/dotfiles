@@ -11,13 +11,13 @@ return {
         pyright = {
           -- Explicitly define the command to run pyright-langserver
           -- This bypasses any PATH issues Neovim might have with Conda's environment
-          cmd = { "/home/sam/.conda/envs/BYOB/bin/pyright-langserver", "--stdio" },
+          cmd = { "/home/sam/.conda/envs/SIT225/bin/pyright-langserver", "--stdio" },
 
           -- Essential internal settings for pyright itself
           settings = {
             python = {
               -- Tell pyright's analysis engine which Python interpreter to use
-              pythonPath = "/home/sam/.conda/envs/BYOB/bin/python",
+              pythonPath = "/home/sam/.conda/envs/SIT225/bin/python",
             },
             -- You can also include other pyright analysis settings here if needed.
             -- These are read by the pyright server itself.
