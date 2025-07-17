@@ -4,17 +4,17 @@
 }
 
 window {
-	background-color: rgba(12, 12, 12, 0.9);
+	background-color: rgba(12, 12, 12, 0.4);
 }
 
 button {
-    border-radius: 0;
-    border-color: black;
+  border-radius: 90;
+  border-color: black;
 	text-decoration-color: #FFFFFF;
-    color: #FFFFFF;
-	background-color: #ab5d1d;
+  color: #FFFFFF;
+	background-color: rgba(200, 150, 100, 0.3);
 	border-style: solid;
-	border-width: 1px;
+	border-width: 0px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 25%;
