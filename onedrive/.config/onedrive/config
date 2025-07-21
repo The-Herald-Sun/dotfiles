@@ -1,2 +1,4 @@
 force_session_upload = "true"
 delay_inotify_processing = "true"
+inotify_delay = "10"
+skip_file = "~*|.~*|*.tmp|*.swp|*.partial|*.bak"
