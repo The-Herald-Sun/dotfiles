@@ -54,18 +54,15 @@ button:hover {
     background-color: #a37800;
 }
 
-#workspace {
-    background-color: #ffffff;
+#workspaces {
+    background-color: rgba(0,0,0,0.5);
     border-radius: 100px;
-
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
 }
 
 #workspaces button {
-    padding: 0 5px;
-    margin-top: 10px;
-    margin-left: 10px;
-    background-color: #f0f0f0;
-    color: #000000;
+    color: white;
     border-radius: 100px;
 }
 
@@ -111,11 +108,6 @@ button:hover {
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 8px;
-}
-
-#window,
-#workspaces {
-    margin: 0 4px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
