@@ -18,25 +18,6 @@ window#waybar.hidden {
     opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-
-
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
-*/
-
 button {
     /* Use box-shadow instead of border so the text isn't offset */
     box-shadow: inset 0 -3px transparent;
@@ -45,11 +26,11 @@ button {
     border-radius: 0;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
+    color: @ACCENT;
 }
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
@@ -59,7 +40,7 @@ button:hover {
 #workspaces {
     background-color: rgba(0,0,0,0.5);
     border-radius: 100px;
-    margin-top: 8px;
+    margin-top: 10px;
     transition: all 0.3s linear;
 }
 
@@ -73,6 +54,7 @@ button:hover {
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
+    color: @ACCENT;
 }
 
 #workspaces button.focused {
@@ -125,7 +107,7 @@ button:hover {
 }
 
 #custom-logout {
-  background-color: rgba(0,0,0,0.5)
+    background-color: rgba(0,0,0,0.5)
 }
 
 /* If workspaces is the leftmost module, omit left margin */
