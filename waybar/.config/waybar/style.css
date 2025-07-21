@@ -120,9 +120,8 @@ button:hover {
     transition: all 0.3s linear;
 }
 
-.modules-right {
-    margin-right: 5px;
-    margin-left: 0px;
+#battery {
+    margin-right: 0px;
 }
 
 #custom-logout {
