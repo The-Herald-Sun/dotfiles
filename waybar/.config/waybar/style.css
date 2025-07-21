@@ -1,3 +1,5 @@
+@define-color ACCENT #ff6f00;
+
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
@@ -57,13 +59,16 @@ button:hover {
 #workspaces {
     background-color: rgba(0,0,0,0.5);
     border-radius: 100px;
-    margin-top: 10px;
-    transition: all 0.3s ease-in-out;
+    margin-top: 8px;
+    transition: all 0.3s linear;
 }
 
 #workspaces button {
+    font-weight: bold;
+    background-color: rgba(0,0,0,0);
     color: white;
     border-radius: 100px;
+    transition: all 0.3s linear;
 }
 
 #workspaces button:hover {
@@ -77,6 +82,10 @@ button:hover {
 
 #workspaces button.urgent {
     background-color: #eb4d4b;
+}
+
+#workspaces button.active {
+  color: @ACCENT;
 }
 
 #mode {
@@ -104,10 +113,20 @@ button:hover {
 #mpd {
     padding: 0px 10px;
     color: #ffffff;
-    border-radius: 10px;
+    border-radius: 100px;
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 8px;
+    transition: all 0.3s linear;
+}
+
+.modules-right {
+    margin-right: 5px;
+    margin-left: 0px;
+}
+
+#custom-logout {
+  background-color: rgba(0,0,0,0.5)
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -121,17 +140,17 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: rgba(0,0,0,0.5);
 }
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
 }
 
 #battery.charging, #battery.plugged {
     color: #ffffff;
-    background-color: #26A65B;
+    background-color: rgba(0,100,0,0.5);
 }
 
 @keyframes blink {
@@ -201,13 +220,13 @@ label:focus {
 }
 
 #pulseaudio {
-    background-color: #f1c40f;
+    background-color: rgba(0,0,0,0.5);
     color: #000000;
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
 }
 
 #wireplumber {
@@ -263,72 +282,10 @@ label:focus {
     color: #2d3436;
 }
 
-#mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
-}
-
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
-}
-
 #language {
     background: #00b093;
     color: #740864;
     padding: 0 5px;
     margin: 0 5px;
     min-width: 16px;
-}
-
-#keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
-}
-
-#keyboard-state > label {
-    padding: 0 5px;
-}
-
-#keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad.empty {
-	background-color: transparent;
-}
-
-#privacy {
-    padding: 0;
-}
-
-#privacy-item {
-    padding: 0 5px;
-    color: white;
-}
-
-#privacy-item.screenshare {
-    background-color: #cf5700;
-}
-
-#privacy-item.audio-in {
-    background-color: #1ca000;
-}
-
-#privacy-item.audio-out {
-    background-color: #0069d4;
 }
