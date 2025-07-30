@@ -1,5 +1,6 @@
 {
     "layer": "top",
+    "padding-top": 100,
     "modules-left": [
         "custom/logout",
         "hyprland/workspaces"
@@ -11,7 +12,11 @@
         "battery",
         "pulseaudio"
     ],
-    "hyprland/workspaces": {},
+    "hyprland/workspaces": {
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
     "sway/window": {
         "max-length": 50
     },
@@ -61,7 +66,7 @@
         "mixer": "pavucontrol" // Specify the mixer application
     },
     "custom/logout": {
-      "format": "", 
+      "format": "<span font='Font Awesome'></span>", 
       "on-click": "wlogout"
   }
 }

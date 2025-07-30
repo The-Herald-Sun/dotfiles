@@ -2,8 +2,12 @@
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    font-family: FontAwesome, Roboto, sans-serif;
     font-size: 13px;
+}
+
+#custom-logout {
+  font-family: FontAwesome;
 }
 
 window#waybar {
@@ -19,10 +23,6 @@ window#waybar.hidden {
 }
 
 button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
-    border: none;
     border-radius: 0;
 }
 
@@ -55,6 +55,10 @@ button:hover {
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
     color: @ACCENT;
+}
+
+#workspaces button.empty {
+  color: #BBBBBB;
 }
 
 #workspaces button.focused {
