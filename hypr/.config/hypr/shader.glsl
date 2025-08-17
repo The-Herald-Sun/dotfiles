@@ -7,8 +7,8 @@ in vec2 v_texcoord;
 out vec4 v_color;
 
 void main() {
-    float warp = -2.0; // simulate curvature of CRT monitor
-    float scan = 0.5; // simulate darkness between scanlines
+    float warp = 0.4; // simulate curvature of CRT monitor
+    float scan = 0.6; // simulate darkness between scanlines
 
     vec2 uv = v_texcoord;
     vec2 dc = abs(0.5 - uv);
