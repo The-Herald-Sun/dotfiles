@@ -2,7 +2,7 @@
 
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Roboto, sans-serif;
+    font-family: "JetBrainsMono Nerd Font", Roboto, sans-serif;
     font-size: 13px;
 }
 
@@ -114,7 +114,9 @@ button:hover {
 }
 
 #custom-logout {
-    background-color: rgba(0,0,0,0.5)
+    /* aspect-ratio: 1; */
+    background-color: rgba(0,0,0,0.5);
+    font-size: 20px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
