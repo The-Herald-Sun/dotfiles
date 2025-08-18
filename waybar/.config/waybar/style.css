@@ -72,6 +72,15 @@ button:hover {
   color: @ACCENT;
 }
 
+.modules-left > * > *{
+    margin-left: 8px;
+}
+
+.modules-right > * > *{
+    margin-right: 8px;
+}
+
+#cpu,
 #custom-logout,
 #clock,
 #battery,
@@ -80,14 +89,11 @@ button:hover {
     padding: 0px 10px;
     color: #ffffff;
     border-radius: 100px;
-    margin-left: 10px;
-    margin-right: 8px;
     transition: all 0.3s linear;
     transition: all 0.3s linear;
 }
 
 #battery {
-    margin-right: 0px;
 }
 
 #custom-logout {

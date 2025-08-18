@@ -9,6 +9,7 @@
         "clock"
     ],
     "modules-right": [
+        "cpu",
         "battery",
         "pulseaudio"
     ],
@@ -68,5 +69,9 @@
     "custom/logout": {
       "format": "<span >\u23fb</span>", 
       "on-click": "wlogout"
-  }
+  },
+    "cpu" : {
+        "format": "{usage}% \uf4bc",
+        "interval": 1
+    }
 }
