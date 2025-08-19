@@ -11,7 +11,8 @@
     "modules-right": [
         "cpu",
         "battery",
-        "pulseaudio"
+        "pulseaudio",
+        "custom/minecraft"
     ],
     "hyprland/workspaces": {
     "persistent-workspaces": {
@@ -73,5 +74,10 @@
     "cpu" : {
         "format": "{usage}% \uf4bc",
         "interval": 1
+    },
+    "custom/minecraft" : {
+        "format": "{} \udb80\udf73",
+        "interval": 60,
+        "exec": "/home/sam/.config/waybar/scripts/minecraft.py"
     }
 }
