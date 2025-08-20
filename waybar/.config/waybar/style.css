@@ -32,6 +32,7 @@ button:hover {
     color: @ACCENT;
 }
 
+#memory,
 #custom-minecraft,
 #cpu,
 #custom-logout,
