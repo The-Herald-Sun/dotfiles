@@ -1,0 +1,50 @@
+[global]
+    #
+    # Main settings
+    #
+    monitor = 0
+    follow = mouse
+    geometry = "300x5-15+45"
+    shrink = no
+    notification_icon = yes
+    line_height = 0
+    separator_height = 10
+    padding = 8
+    horizontal_padding = 8
+    frame_width = 2
+    frame_color = "#3B4252"
+    transparency = 0
+    corner_radius = 5
+
+    #
+    # Font and colors
+    #
+    font = FiraCode Nerd Font 10
+    word_wrap = yes
+    ellipsize = yes
+    format = "<b>%s</b>\n%b"
+
+    #
+    # Shortcuts
+    #
+    close_all_key = ctrl+space
+    close_on_click = yes
+
+    #
+    # Urgency levels
+    #
+    [urgency_low]
+        background = "#4C566A"
+        foreground = "#ECEFF4"
+        timeout = 5
+
+    [urgency_normal]
+        background = "#2E3440"
+        foreground = "#ECEFF4"
+        timeout = 10
+
+    [urgency_critical]
+        background = "#BF616A"
+        foreground = "#2E3440"
+        frame_color = "#D08770"
+        timeout = 0
