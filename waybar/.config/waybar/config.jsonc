@@ -80,8 +80,10 @@
         "format": "{used}/{total} GiB"
     },
     "custom/minecraft" : {
-        "format": "{} \udb80\udf73",
+        "format": "{text} \udb80\udf73",
         "interval": 60,
-        "exec": "/home/sam/.config/waybar/scripts/minecraft.py"
+        "exec": "/home/sam/.config/waybar/scripts/minecraft.py",
+        "tooltip": true,
+        "return-type": "json"
     }
 }
