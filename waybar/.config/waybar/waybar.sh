@@ -1,7 +1,11 @@
 #!/bin/bash
 
-pkill waybar
+toggle_waybar() {
+  if pgrep -x "waybar" >/dev/null; then
+    pkill waybar
+  else
+    waybar &
+  fi
+}
 
-sleep 0.05
-
-waybar &
+toggle_waybar
