@@ -8,3 +8,5 @@ vim.g.lazyvim_python_lsp = "pyright"
 -- vim.o.expandtab = true -- Converts tabs to spaces when you press Tab
 -- vim.o.softtabstop = 4 -- Number of spaces a Tab or Backspace in insert mode counts for
 -- vim.o.shiftwidth = 4 -- Number of spaces used for auto-indentation and indent commands
+
+vim.g.snacks_animate = false
