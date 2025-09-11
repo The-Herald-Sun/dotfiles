@@ -29,6 +29,6 @@ try:
 
 except Exception as e:
     # print(e)
-    waybar_data = {"text": "\uf4ad", "tooltip": "", "class": "minecraft"}
+    waybar_data = {"text": "\uf4ad", "tooltip": "Server Offline", "class": "minecraft"}
     print(json.dumps(waybar_data))
     sys.exit(0)
