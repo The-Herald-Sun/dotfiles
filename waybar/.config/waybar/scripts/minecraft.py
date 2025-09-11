@@ -25,8 +25,10 @@ try:
         waybar_data["tooltip"] = waybar_data["tooltip"][:-2]  # remove last new line
     else:
         waybar_data["tooltip"] = "No Players Online"
-
     print(json.dumps(waybar_data))
+
 except Exception as e:
-    print(e)
-    sys.exit(1)
+    # print(e)
+    waybar_data = {"text": "\uf4ad", "tooltip": "", "class": "minecraft"}
+    print(json.dumps(waybar_data))
+    sys.exit(0)
