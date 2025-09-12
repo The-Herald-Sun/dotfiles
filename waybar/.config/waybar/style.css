@@ -32,6 +32,7 @@ button:hover {
     color: @ACCENT;
 }
 
+#custom-spotify,
 #memory,
 #custom-minecraft,
 #cpu,
