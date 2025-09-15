@@ -62,7 +62,7 @@ def get_spotify_data():
             ).stdout.strip()
 
             icon = ""
-            text = f"{icon} {title}"
+            text = f"{title} {icon} {artist}"
             tooltip = f"<b>{title}</b>\nby {artist}"
             waybar_class = "playing"
 
@@ -83,7 +83,7 @@ def get_spotify_data():
             ).stdout.strip()
 
             icon = ""
-            text = f"{icon} {title}"
+            text = f"{title} {icon} {artist}"
             tooltip = f"<b>{title}</b>\nby {artist}"
             waybar_class = "paused"
 
@@ -94,11 +94,15 @@ def get_spotify_data():
             tooltip = "Nothing is currently playing on Spotify."
             waybar_class = "paused"
 
-        return {"text": text, "tooltip": tooltip, "class": waybar_class}
+        return {
+            "text": text,
+            "tooltip": tooltip,
+            "class": waybar_class,
+        }
 
     except subprocess.CalledProcessError as e:
         return {
-            "text": " Error",
+            "text": "Error  ",
             "tooltip": f"playerctl error: {e.stderr.strip()}",
             "class": "error",
         }
