@@ -91,6 +91,7 @@
     "format": "{}",
     "interval": 1,
     "exec": "python3 ~/.config/waybar/scripts/spotify.py",
-    "return-type": "json"
+    "return-type": "json",
+    "on-click": "playerctl play-pause"
   }
 }

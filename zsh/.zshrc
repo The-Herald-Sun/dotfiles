@@ -145,3 +145,11 @@ function conda() {
 # function mamba() {
 #     _lazy_conda_init mamba "$@"
 # }
+#
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitpro/devkitARM
+export DEVKITPPC=/opt/devkitpro/devkitPPC
+
+
+export PATH=$PATH:$DEVKITARM/bin:$DEVKITPPC/bin
+export PATH=$PATH:/opt/devkitpro/tools/bin
