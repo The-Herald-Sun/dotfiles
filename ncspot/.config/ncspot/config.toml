@@ -1,0 +1,21 @@
+use_nerdfont = true
+[keybindings]
+"Esc" = "back"
+
+[theme]
+# background = "#242936"
+primary = "#CCCAC2"
+secondary = "#707A8C"
+title = "#FFCC66"
+playing = "#FFCC66"
+playing_selected = "#FFCC66"
+playing_bg = "#242936"
+highlight = "#409FFF"
+highlight_bg = "#695380"
+error = "#FF6666"
+error_bg = "#A50000"
+statusbar = "#242936"
+statusbar_progress = "#FFCC66"
+statusbar_bg = "#1F2430"
+cmdline = "#CCCAC2"
+cmdline_bg = "#1C212B"
