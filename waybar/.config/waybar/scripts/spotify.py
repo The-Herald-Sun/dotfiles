@@ -10,6 +10,8 @@ def get_spotify_data():
     Uses playerctl to get the current song data from the Spotify client.
     Returns a JSON object formatted for Waybar.
     """
+    player = "ncspot"  # Extract player into a variable
+
     try:
         # Check if the playerctl command is available
         subprocess.run(["playerctl"], capture_output=True, check=True)
@@ -26,7 +28,7 @@ def get_spotify_data():
     try:
         # Get the status of the Spotify player
         status = subprocess.run(
-            ["playerctl", "--player=spotify", "status"],
+            ["playerctl", f"--player={player}", "status"],
             capture_output=True,
             text=True,
             check=False,
@@ -34,28 +36,27 @@ def get_spotify_data():
 
         if status == "Playing":
             # Get metadata for the playing song
-            metadata_str = subprocess.run(
+            title = subprocess.run(
                 [
                     "playerctl",
-                    "--player=spotify",
+                    f"--player={player}",
                     "metadata",
                     "--format",
-                    "{{title}} - {{artist}}",
+                    "{{title}}",
                 ],
                 capture_output=True,
                 text=True,
                 check=False,
             ).stdout.strip()
 
-            title = subprocess.run(
-                ["playerctl", "--player=spotify", "metadata", "--format", "{{title}}"],
-                capture_output=True,
-                text=True,
-                check=False,
-            ).stdout.strip()
-
             artist = subprocess.run(
-                ["playerctl", "--player=spotify", "metadata", "--format", "{{artist}}"],
+                [
+                    "playerctl",
+                    f"--player={player}",
+                    "metadata",
+                    "--format",
+                    "{{artist}}",
+                ],
                 capture_output=True,
                 text=True,
                 check=False,
@@ -69,21 +70,33 @@ def get_spotify_data():
         elif status == "Paused":
             # Get metadata for the paused song
             title = subprocess.run(
-                ["playerctl", "--player=spotify", "metadata", "--format", "{{title}}"],
+                [
+                    "playerctl",
+                    f"--player={player}",
+                    "metadata",
+                    "--format",
+                    "{{title}}",
+                ],
                 capture_output=True,
                 text=True,
                 check=False,
             ).stdout.strip()
 
             artist = subprocess.run(
-                ["playerctl", "--player=spotify", "metadata", "--format", "{{artist}}"],
+                [
+                    "playerctl",
+                    f"--player={player}",
+                    "metadata",
+                    "--format",
+                    "{{artist}}",
+                ],
                 capture_output=True,
                 text=True,
                 check=False,
             ).stdout.strip()
 
             icon = ""
-            text = f"{title} {icon} {artist}"
+            text = f"{icon} {title}"
             tooltip = f"<b>{title}</b>\nby {artist}"
             waybar_class = "paused"
 
