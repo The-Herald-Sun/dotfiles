@@ -10,7 +10,7 @@ def get_spotify_data():
     Uses playerctl to get the current song data from the Spotify client.
     Returns a JSON object formatted for Waybar.
     """
-    player = "ncspot"  # Extract player into a variable
+    player = "chromium"  # Extract player into a variable
 
     try:
         # Check if the playerctl command is available
