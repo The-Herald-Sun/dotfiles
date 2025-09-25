@@ -4,14 +4,28 @@
 # The `awk` command is configured to print the third field, which is the first number.
 CURRENT_GAPS_IN=$(hyprctl getoption general:gaps_in | awk '{print $3}')
 
+waybar_on() {
+  if ! pgrep -x "waybar" >/dev/null; then
+    waybar &
+  fi
+}
+
+waybar_off() {
+  if pgrep -x "waybar" >/dev/null; then
+    pkill waybar
+  fi
+}
+
 # Check if the value is an integer and perform the toggle.
 if [ "$CURRENT_GAPS_IN" -eq 0 ]; then
+  waybar_on
   # State is no gaps, switch to gaps
   hyprctl keyword general:gaps_in 5
   hyprctl keyword general:gaps_out 10
   hyprctl keyword general:border_size 4
   hyprctl keyword decoration:rounding 10
 else
+  waybar_off
   # State is gaps, switch to no gaps
   hyprctl keyword general:gaps_in 0
   hyprctl keyword general:gaps_out 0
