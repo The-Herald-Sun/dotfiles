@@ -4,15 +4,25 @@
 # The `awk` command is configured to print the third field, which is the first number.
 CURRENT_GAPS_IN=$(hyprctl getoption general:gaps_in | awk '{print $3}')
 
+# waybar_on() {
+#   if ! pgrep -x "waybar" >/dev/null; then
+#     waybar &
+#   fi
+# }
 waybar_on() {
-  if ! pgrep -x "waybar" >/dev/null; then
+  if pgrep -x waybar >/dev/null; then
+    # Waybar is running, send SIGUSR1 to show it (in case it's hidden)
+    killall -SIGUSR1 waybar
+  else
+    # Waybar is not running, start it
     waybar &
   fi
 }
 
 waybar_off() {
   if pgrep -x "waybar" >/dev/null; then
-    pkill waybar
+    # pkill waybar
+    killall -SIGUSR1 waybar || waybar
   fi
 }
 

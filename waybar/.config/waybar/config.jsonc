@@ -1,5 +1,6 @@
 {
   "layer": "top",
+  "position": "top",
   "padding-top": 100,
   "modules-left": [
     "custom/logout",
