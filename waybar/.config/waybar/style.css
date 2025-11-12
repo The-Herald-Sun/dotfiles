@@ -28,9 +28,9 @@ window#waybar.hidden {
     /* margin-top: -10px; */
 }
 
-button {
-    border-radius: 0;
-}
+/* button { */
+/*     border-radius: 0; */
+/* } */
 
 button:hover {
     color: @ACCENT;
@@ -64,6 +64,7 @@ button:hover {
     color: white;
     border-radius: 100px;
     transition: all 0.3s linear;
+    min-width: 10px;
 }
 
 #workspaces button:hover {
