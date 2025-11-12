@@ -13,16 +13,17 @@ button {
   border-color: black;
 	text-decoration-color: #FFFFFF;
   color: #FFFFFF;
-	background-color: rgba(200, 150, 100, 0.3);
+	/* background-color: rgba(200, 150, 100, 0.3); */
 	border-style: solid;
 	border-width: 0px;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 25%;
+  background-color: rgba(0,0,0,0.5);
 }
 
 button:focus, button:active, button:hover {
-	background-color: #3700B3;
+	background-color: #444444;
 	outline-style: none;
 }
 
