@@ -104,7 +104,7 @@ def get_spotify_data():
             # Player is either stopped or there's no active player
             icon = ""
             text = f"{icon} Not playing"
-            tooltip = "Nothing is currently playing on Spotify."
+            tooltip = "Nothing is currently playing."
             waybar_class = "paused"
 
         return {

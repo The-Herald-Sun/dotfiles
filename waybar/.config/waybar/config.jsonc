@@ -5,10 +5,10 @@
   "modules-left": [
     "custom/logout",
     "clock",
-    "hyprland/workspaces"
+    "custom/spotify"
   ],
   "modules-center": [
-    "custom/spotify"
+    "hyprland/workspaces"
   ],
   "modules-right": [
     "memory",

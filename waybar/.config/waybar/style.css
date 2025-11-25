@@ -63,7 +63,7 @@ button:hover {
     background-color: rgba(0,0,0,0);
     color: white;
     border-radius: 100px;
-    transition: all 0.3s linear;
+    transition: all 0.2s ease;
     min-width: 10px;
 }
 
@@ -87,6 +87,7 @@ button:hover {
 
 #workspaces button.active {
   color: @ACCENT;
+  min-width: 20px;
 }
 
 .modules-left > * > *{
