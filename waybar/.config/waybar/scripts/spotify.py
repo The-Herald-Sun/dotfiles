@@ -2,7 +2,6 @@
 
 import subprocess
 import json
-import sys
 
 
 def get_spotify_data():

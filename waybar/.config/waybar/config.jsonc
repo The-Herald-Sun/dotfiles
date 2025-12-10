@@ -83,7 +83,7 @@
   },
   "custom/minecraft": {
     "format": "{text} \udb80\udf73",
-    "interval": 60,
+    "interval": 120,
     "exec": "/home/sam/.config/waybar/scripts/minecraft.py",
     "tooltip": true,
     "return-type": "json"
@@ -91,7 +91,7 @@
   "custom/spotify": {
     "format": "{}",
     "interval": 1,
-    "exec": "python3 ~/.config/waybar/scripts/spotify.py",
+    "exec": "~/.config/waybar/scripts/player_script.sh",
     "return-type": "json",
     "on-click": "playerctl play-pause"
   }
