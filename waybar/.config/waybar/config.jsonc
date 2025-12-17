@@ -13,9 +13,9 @@
   "modules-right": [
     "memory",
     "cpu",
-    "battery",
     "pulseaudio",
-    "custom/minecraft"
+    "custom/minecraft",
+    "battery"
   ],
   "hyprland/workspaces": {
     "persistent-workspaces": {
