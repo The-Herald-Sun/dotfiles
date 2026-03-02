@@ -1,3 +1,4 @@
+@import "colors.css";
 @define-color ACCENT #ff6f00;
 
 * {
@@ -20,20 +21,15 @@ window#waybar.top {
     color: #ffffff;
     transition: opacity 0.3s ease-in-out, margin-top 0.3s ease-in-out;
     opacity: 1;
-    /* margin-top: 0; */
 }
 
 window#waybar.hidden {
     opacity: 0;
-    /* margin-top: -10px; */
 }
 
-/* button { */
-/*     border-radius: 0; */
-/* } */
 
 button:hover {
-    color: @ACCENT;
+    color: @tertiary;
 }
 
 #custom-spotify,
@@ -43,47 +39,19 @@ button:hover {
 #custom-logout,
 #clock,
 #battery,
+#workspaces,
 #pulseaudio {
-    background-color: rgba(0,0,0,0.5);
+    background-color: alpha(@primary_container, 0.7);
+    border: 0px solid @secondary;
     padding: 0 10px;
     color: #ffffff;
     border-radius: 100px;
     transition: all 0.3s linear;
 }
-/* purple */
 
-#memory {
-  background-color: rgba(0,50,100,0.5);
-}
-
-#custom-spotify {
-  background-color: rgba(90,100,0,0.5);
-}
-
-#clock {
-  background-color: rgba(140,80,0,0.5);
-}
-
-#pulseaudio {
-  background-color: rgba(70,0,150,0.5);
-}
-
-#custom-minecraft {
-  background-color: rgba(110,0,90,0.5);
-  /* background-color: rgba(0,100,0,0.5); */
-}
-
-#cpu {
-  background-color: rgba(0,0,100,0.5);
-}
-
-#custom-logout {
-  background-color: rgba(110,0,0,0.5);
-}
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces {
-    background-color: rgba(0,90,0,0.5);
     border-radius: 100px;
     transition: all 0.2s linear;
 }
@@ -116,7 +84,7 @@ button:hover {
 }
 
 #workspaces button.active {
-  color: @ACCENT;
+  color: @tertiary_fixed;
 }
 
 #workspaces button.active:not(:last-child):not(:first-child) {
@@ -163,7 +131,7 @@ button:hover {
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
+    background-color: @error_container;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
