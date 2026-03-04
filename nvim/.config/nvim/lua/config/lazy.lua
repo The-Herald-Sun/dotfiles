@@ -21,10 +21,7 @@ require("lazy").setup({
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
       opts = {
-        colorscheme = "ayu", -- <--- ADDED THIS LINE to tell LazyVim to use Ayu
-        -- Ensure 'background' is NOT explicitly set to 'dark' or 'light' here,
-        -- as the theme's transparency settings in ayu.lua handle it.
-        -- background = "dark", -- Remove or comment this out if it was here
+        colorscheme = "ayu",
       },
     },
     -- import/override with your plugins
