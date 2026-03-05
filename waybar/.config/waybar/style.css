@@ -12,7 +12,7 @@
 }
 
 #waybar > *{
-    margin-top: 8px;
+    margin-top: 0px;
     margin-bottom: 0px;
 }
 
@@ -27,6 +27,9 @@ window#waybar.hidden {
     opacity: 0;
 }
 
+button {
+  min-height: 0;
+}
 
 button:hover {
     color: @tertiary;
@@ -45,14 +48,15 @@ button:hover {
     border: 0px solid @secondary;
     padding: 0 10px;
     color: #ffffff;
-    border-radius: 100px;
+    /* border-radius: 100px; */
+    border-radius: 0px 0px 10px 10px ;
     transition: all 0.3s linear;
 }
 
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces {
-    border-radius: 100px;
+    border-radius: 0 0 10px 10px;
     transition: all 0.2s linear;
 }
 
@@ -87,18 +91,18 @@ button:hover {
   color: @tertiary_fixed;
 }
 
-#workspaces button.active:not(:last-child):not(:first-child) {
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-#workspaces > button.active:first-child  {
-  padding-right: 15px;
-}
-
-#workspaces > button.active:last-child {
-  padding-left: 15px;
-}
+/* #workspaces button.active:not(:last-child):not(:first-child) { */
+/*   padding-left: 15px; */
+/*   padding-right: 15px; */
+/* } */
+/**/
+/* #workspaces > button.active:first-child  { */
+/*   padding-right: 15px; */
+/* } */
+/**/
+/* #workspaces > button.active:last-child { */
+/*   padding-left: 15px; */
+/* } */
 
 .modules-left > * > *{
     margin-left: 8px;
