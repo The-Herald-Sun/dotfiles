@@ -33,7 +33,7 @@ output_path = '~/.config/wofi/colors.css'
 [templates.kitty]
 input_path = '~/.config/matugen/kitty-colors.conf'
 output_path = '~/.config/kitty/themes/Matugen.conf'
-post_hook = "kitty +kitten themes --reload-in=all Matugen"
+post_hook = "kitty +kitten themes --cache-age=-1 --reload-in=all Matugen"
 
 [templates.hypr]
 input_path = '~/.config/matugen/hypr-colors.conf'
