@@ -17,7 +17,7 @@
 }
 
 window#waybar.top {
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: alpha(@background, 0.0);
     color: #ffffff;
     transition: opacity 0.3s ease-in-out, margin-top 0.3s ease-in-out;
     opacity: 1;
@@ -103,6 +103,10 @@ button:hover {
 /* #workspaces > button.active:last-child { */
 /*   padding-left: 15px; */
 /* } */
+
+#workspaces {
+  padding: 0;
+}
 
 .modules-left > * > *{
     margin-left: 8px;
