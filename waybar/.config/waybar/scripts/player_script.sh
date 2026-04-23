@@ -56,7 +56,6 @@ get_spotify_data() {
     CLASS="paused"
   fi
 
-  # The crucial -c flag ensures compact JSON output
   jq -n -c --arg text "${TEXT}" \
     --arg tooltip "${TOOLTIP}" \
     --arg class "${CLASS}" \

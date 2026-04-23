@@ -156,3 +156,4 @@ export PATH=$PATH:/opt/devkitpro/tools/bin
 
 # set nvim as manpager
 export MANPAGER='nvim +Man!'
+export EDITOR=nvim

@@ -35,7 +35,8 @@ button:hover {
     color: @tertiary;
 }
 
-#custom-spotify,
+/* #custom-spotify, */
+#music,
 #memory,
 #custom-minecraft,
 #cpu,
@@ -44,13 +45,17 @@ button:hover {
 #battery,
 #workspaces,
 #pulseaudio {
-    background-color: alpha(@primary_container, 0.7);
+    background-color: alpha(@primary_container, 1.0);
     border: 0px solid @secondary;
     padding: 0 10px;
     color: #ffffff;
     /* border-radius: 100px; */
     border-radius: 0px 0px 10px 10px ;
     transition: all 0.3s linear;
+}
+
+#music :first-child {
+  padding-right: 2px;
 }
 
 

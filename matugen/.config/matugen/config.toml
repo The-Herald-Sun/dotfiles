@@ -12,7 +12,7 @@ set = true
 
 # The base command to run for applying the wallpaper.
 # Keywords like {{ image }} or anything that works inside of hooks works here.
-command = "/home/sam/.config/hypr/hyprpaper/switchhyprpaper.sh"
+command = "/home/sam/.config/hypr/hyprpaper/switchhyprpaper.sh {{ image }}"
 
 # For example, killing the wallpaper daemon. Usage is like a normal hook.
 # pre_hook = ""

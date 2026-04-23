@@ -5,7 +5,9 @@
   "modules-left": [
     "custom/logout",
     "clock",
-    "custom/spotify"
+    "group/music"
+    // "image#album-art",
+    // "custom/spotify"
   ],
   "modules-center": [
     "hyprland/workspaces"
@@ -94,5 +96,19 @@
     "exec": "~/.config/waybar/scripts/player_script.sh",
     "return-type": "json",
     "on-click": "playerctl play-pause"
+  },
+  "image#album-art": {
+    "interval": 1,
+    "size": 22,
+    // "size": 60,
+    "exec": "/home/sam/.config/waybar/scripts/player_album_art.sh",
+    "return-type": "json"
+  },
+  "group/music": {
+    "orientation": "horizontal",
+    "modules": [
+      "image#album-art",
+      "custom/spotify"
+    ]
   }
 }
